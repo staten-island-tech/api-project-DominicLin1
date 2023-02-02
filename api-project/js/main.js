@@ -1,6 +1,6 @@
 import "../css/style.css"
 const URL= "https://animechan.vercel.app/api/random"
-const AnimeTitleURL="https://animechan.vercel.app/api/random/anime?title=naruto"
+const AnimeTitleURL="https://animechan.vercel.app/api/random/anime?title=${}"
 /* fetch('https://animechan.vercel.app/api/random')
     .then(response => response.json())
     .then(quote => console.log(quote));
