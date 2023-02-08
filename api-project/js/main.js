@@ -12,25 +12,27 @@ const DOMselectors= {
 
    DOMselectors.form.addEventListener("submit",
 function create(event){
-   insert(event);
+   let title = DOMselectors.title.value;
+   getData(title);
    event.preventDefault();
 }
    )
    function insert(){
       let title=document.title.value
-      getData(title)
    
    }
-    async function getData(e) {
-      let AnimeTitleURL="https://animechan.vercel.app/api/random/anime?title=${e}"
+    async function getData() {
+      let AnimeTitleURL="https://animechan.vercel.app/api/random/anime?title=${}"
+      let title=document.title.value
+      insert()
    try {
     
-    const response = await fetch(AnimeTitleURL);
+    const response = await fetch(AnimeTitleURL.DOMselectors.title);
     const data = await response.json();
     document.getElementById("api").textContent=data
     console.log(data);
     console.log(response)
    } catch (error) {
-    console.log(error)
+    console.log(errorss)
    }
        }
