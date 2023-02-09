@@ -18,9 +18,8 @@ function create(event){
 })
    
    
-    async function getData() {
-      let AnimeTitleURL="https://animechan.vercel.app/api/random/anime?title=naruto"
-      const title=document.title.value
+    async function getData(title) {
+      let AnimeTitleURL=`https://animechan.vercel.app/api/random/anime?title=${title}`
 
    try {
     
