@@ -15,24 +15,21 @@ function create(event){
    let title = DOMselectors.title.value;
    getData(title);
    event.preventDefault();
-}
-   )
-   function insert(){
-      let title=document.title.value
+})
    
-   }
+   
     async function getData() {
-      let AnimeTitleURL="https://animechan.vercel.app/api/random/anime?title=${}"
-      let title=document.title.value
-      insert()
+      let AnimeTitleURL="https://animechan.vercel.app/api/random/anime?title=naruto"
+      const title=document.title.value
+
    try {
     
-    const response = await fetch(AnimeTitleURL.DOMselectors.title);
+    const response = await fetch(AnimeTitleURL);
     const data = await response.json();
-    document.getElementById("api").textContent=data
-    console.log(data);
+    document.getElementById("api").textContent=data.quote
+    console.log(data.quote);
     console.log(response)
    } catch (error) {
-    console.log(errorss)
+    console.log(error)
    }
        }
