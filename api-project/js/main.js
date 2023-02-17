@@ -33,8 +33,9 @@ function create(event){
 
        async function getCharacter(title) {
          let AnimeTitleURL=`https://animechan.vercel.app/api/random/anime?title=${title}`
-   
-      try {
+       }
+      //  dont need this because it's already in getData 
+      /* try {
        
        const response = await fetch(AnimeTitleURL);
        const data = await response.json();
@@ -47,4 +48,4 @@ function create(event){
        console.log(error)
       }
           }
-   
+    */
